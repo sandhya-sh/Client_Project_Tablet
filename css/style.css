@@ -687,9 +687,6 @@ figcaption {
     border-radius: 50%;
     background-color: #00274c; 
     color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     animation: bounceGlow 2.5s infinite ease-in-out;
@@ -708,11 +705,11 @@ figcaption {
   @keyframes bounceGlow {
     0%, 100% {
       transform: translateY(0) scale(1);
-      filter: drop-shadow(0 0 4px #ffd700);
+      filter: drop-shadow(0 0 4px rgb(255, 203, 5));
     }
     50% {
       transform: translateY(-5px) scale(1.1);
-      filter: drop-shadow(0 0 10px #ffd700);
+      filter: drop-shadow(0 0 10px rgb(255, 203, 5));
     }
   }
   .tooltip {
@@ -749,7 +746,7 @@ figcaption {
 
   .slide-panel {
     position: fixed;
-    bottom: -330px; /* hidden below viewport */
+    bottom: -500px;
     left: 0;
     width: 100%;
     background-color: #f9f9f9;
