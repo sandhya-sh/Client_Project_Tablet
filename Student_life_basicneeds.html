@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Student Life Basic Needs</title>
+
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="skip"><a href="#main">Skip to Main Content</a></div>
+        <div class="header-container" id="header-top">
+            <div class="logo">
+                <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo">
+            </div>
+            <nav class="main-nav" aria-label="Primary Navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="CAPS.html">CAPS</a></li>
+                    <li><a href="Student_life_basicneeds.html" class="active" aria-current="page">Student Life: Basic
+                            Needs </a></li>
+                    <li><a href="UMSI_tutoring.html">UMSI Tutoring Page</a></li>
+                </ul>
+            </nav>
+            <div class="secondary-nav">
+                <a href="#">Resources</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+
+        <h1>Student Life Basic Needs</h1>
+
+    </header>
+
+    <main class="container" id="main">
+        <section class="hero">
+            <div class="hero-content">
+                <label for="search" class="visually-hidden">Search</label>
+                <input id="search" type="search" placeholder="Search" name="search" />
+                <h2>Striving for fair and equitable access to food and other basic resources</h2>
+            </div>
+            <div class="hero-image">
+                <img src="images/hero-bg.jpg" alt="Students engaging on campus" />
+            </div>
+        </section>
+
+        <section class="resources">
+            <h2 class="section-title">Resources By Category</h2>
+            <div class="grid-categories">
+                <article class="category">
+                    <img src="images/criticalincident.jpg" alt="Student under stress" />
+                    <h3>Critical Incident Support &amp; Conflict Management</h3>
+                    <p>
+                        Support for students impacted by critical incidents or conflict, offering guidance and care.
+                    </p>
+                </article>
+                <article class="category">
+                    <img src="images/finance.jpg" alt="Financial assistance" />
+                    <h3>Finance</h3>
+                    <p>
+                        Financial resources for emergencies, college funding, and employment opportunities.
+                    </p>
+                </article>
+                <article class="category">
+                    <img src="images/food.jpg" alt="Fresh healthy food" />
+                    <h3>Food</h3>
+                    <p>
+                        Services and programs to ensure healthy eating habits and assistance with food access.
+                    </p>
+                </article>
+                <article class="category">
+                    <img src="images/UHS.jpg" alt="Healthcare facility" />
+                    <h3>Healthcare</h3>
+                    <p>
+                        Information on medical, dental, and mental health services, including insurance support.
+                    </p>
+                </article>
+                <article class="category">
+                    <img src="images/housingtransportation.jpg" alt="Housing and transportation" />
+                    <h3>Housing and Transportation</h3>
+                    <p>
+                        Campus and community resources for housing and transportation needs.
+                    </p>
+                </article>
+            </div>
+            <button class="view-all">View All Resources</button>
+        </section>
+        <section class="bulb">
+            <div class="bulb-container">
+                <button class="bulb-icon" id="bulbIcon">
+                    <!-- The tooltip that appears on hover -->
+                    <div class="tooltip">Need Help?</div>
+                    <!-- Inline SVG for a simple lightbulb -->
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M9 18h6M10 22h4M12 2C8.13 2 5 5.13 5 9c0 3 2 5 2 5h10s2-2 2-5c0-3.87-3.13-7-7-7z">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Slide-Up Panel -->
+            <div class="slide-panel" id="slidePanel">
+                <div class="panel-header">
+                    <h2>Ask a Question</h2>
+                    <button id="closePanelBtn" aria-label="Close panel">&times;</button>
+                </div>
+                <div class="panel-content">
+                    <div class="chat-log" id="chatLog">
+                        <!-- Chat messages appear here -->
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <input type="text" id="userInput" placeholder="Type your question..." />
+                    <button id="submitBtn">Submit</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>
+            University Housing is a unit of Student Life, and an equal opportunity educator and employer.
+        </p>
+        <p>
+            &copy; <span id="footer-year"></span> The Regents of the University of Michigan
+        </p>
+    </footer>
+    <script>
+        /* Inspiration from https://www.codexworld.com/how-to/get-current-year-to-display-dynamic-year-in-copyright-using-javascript/ */
+        const currentYear = new Date().getFullYear();
+        document.getElementById('footer-year').textContent = currentYear;
+        // Get references to our elements, used chatgpt to take references for the js //
+        const bulbIcon = document.getElementById('bulbIcon');
+        const slidePanel = document.getElementById('slidePanel');
+        const closePanelBtn = document.getElementById('closePanelBtn');
+        const userInput = document.getElementById('userInput');
+        const submitBtn = document.getElementById('submitBtn');
+        const chatLog = document.getElementById('chatLog');
+        // When user clicks the bulb icon -> show the panel
+        bulbIcon.addEventListener('click', () => {
+            slidePanel.classList.add('open');
+            // Optionally focus the input
+            userInput.focus();
+        });
+        // When user clicks the close (X) button -> hide the panel
+        closePanelBtn.addEventListener('click', () => {
+            slidePanel.classList.remove('open');
+            // Optionally return focus to the icon
+            bulbIcon.focus();
+        });
+        // On Submit, add a user message and a standard "connecting..." response
+        submitBtn.addEventListener('click', () => {
+            const userText = userInput.value.trim();
+            if (userText.length > 0) {
+                // Create a user message element
+                const userMessage = document.createElement('div');
+                userMessage.classList.add('chat-message');
+                userMessage.textContent = `You: ${userText}`;
+                chatLog.appendChild(userMessage);
+                // Clear the input
+                userInput.value = '';
+                // Auto-scroll the chat log to the bottom
+                chatLog.scrollTop = chatLog.scrollHeight;
+                // “AI” response: standard message
+                setTimeout(() => {
+                    const botMessage = document.createElement('div');
+                    botMessage.classList.add('chat-message');
+                    botMessage.textContent =
+                        "Support Bot: Thanks for your question! Trying to connect you to support...";
+                    chatLog.appendChild(botMessage);
+                    chatLog.scrollTop = chatLog.scrollHeight;
+                }, 500);
+            }
+        });
+        // Optionally allow pressing Enter to submit
+        userInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                submitBtn.click();
+            }
+        });
+    </script>
+
+</body>
+
+</html>

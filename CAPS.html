@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Caps</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="skip"><a href="#main">Skip to Main Content</a></div>
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo">
+            </div>
+            <nav class="main-nav" aria-label="Primary Navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="CAPS.html" class="active" aria-current="page">CAPS</a></li>
+                    <li><a href="Student_life_basicneeds.html">Student Life: Basic Needs </a></li>
+                    <li><a href="UMSI_tutoring.html">UMSI Tutoring Page</a></li>
+                </ul>
+            </nav>
+        </div>
+        <h1>Welcome to Counseling and Psychological Services (CAPS)</h1>
+    </header>
+
+    <main class="container" id="main">
+
+        <section class="intro">
+            <div class="intro-text">
+                <p>
+                    At CAPS, we empower our students with resources and support to
+                    navigate the stresses of college life. Whether you’re looking for
+                    confidential counseling or just a friendly conversation, we’re here
+                    to help you thrive.
+                </p>
+                <div class="intro-buttons">
+                    <button>Make an Appointment</button>
+                    <button>Urgent Support</button>
+                </div>
+            </div>
+            <div class="intro-image">
+                <img src="images/caps.png" alt="CAPS team providing support" />
+            </div>
+        </section>
+
+        <section class="info-cards">
+            <article class="card">
+                <img src="images/img2.png" alt="Poster promoting mental health awareness" />
+                <h2>Our Services</h2>
+                <p>
+                    CAPS offers both in-person and virtual counseling sessions. Our
+                    compassionate team is ready to listen and guide you through your
+                    mental health journey.
+                </p>
+                <a href="#">Learn More</a>
+            </article>
+            <article class="card">
+                <img src="images/close-up-community-holding-hands.jpg" alt="Community support: hands held together" />
+                <h2>Let's Talk</h2>
+                <p>
+                    “Let's Talk” is a free drop-in program designed to support students
+                    starting their mental health journeys. Get casual advice from our
+                    counselors.
+                </p>
+                <a href="#">Join Now</a>
+            </article>
+            <article class="card">
+                <img src="images/MCOMMONS-WinterSemester2025-01.png" alt="Students engaging in peer counseling" />
+                <h2>Peer Counseling</h2>
+                <p>
+                    Our Individual Peer Counseling program connects you with trained
+                    student counselors for empathetic support and practical advice.
+                </p>
+                <a href="#">Read More</a>
+            </article>
+            <article class="card">
+                <img src="images/img_4099_1_0.jpg" alt="An image with the hope text in front of a person" />
+                <h2>Sexualized Violence</h2>
+                <p>
+                    Sexual violence does not discriminate. Both survivors and perpetrators come from all genders,
+                    cultures, races, ethnicities, sexual orientations, socio-economic status, and religions. Sexual
+                    violence is defined as any unwanted sexual contact or interaction and can include:
+                </p>
+                <a href="#">Read More</a>
+            </article>
+        </section>
+
+        <section class="announcement">
+            <h2>A Note of Solidarity</h2>
+            <p>
+                CAPS stands with all students affected by the ongoing global events.
+                We understand the pain, fear, and uncertainty many are feeling and are
+                here to provide additional support during these challenging times.
+            </p>
+        </section>
+
+        <section class="resources">
+            <h2>More Resources</h2>
+            <div class="resources-buttons">
+                <button>Treatment and Support Options</button>
+                <button>When Can I Be Seen?</button>
+                <button>Workshop Request</button>
+                <button>Urgent Support</button>
+            </div>
+        </section>
+
+        <section class="contact-hours">
+            <div class="hours">
+                <h3>Office Hours</h3>
+                <p>Monday - Thursday: 8am - 6pm</p>
+                <p>Friday: 8am - 5pm</p>
+                <p>Saturday &amp; Sunday: Closed</p>
+                <p>Urgent/Crisis Support: Monday - Friday, 10am - 4:30pm</p>
+                <a href="#">After Hours 24/7 Support</a>
+            </div>
+            <div class="contact">
+                <h3>Contact</h3>
+                <p>Phone: 734-764-8312 (24hrs)</p>
+                <p>Email: <a href="mailto:caps-uofm@umich.edu">caps-uofm@umich.edu</a></p>
+                <p>Michigan Union</p>
+                <p>530 South State Street, Suite 4079</p>
+                <p>Ann Arbor, MI 48109</p>
+            </div>
+        </section>
+        <section class="bulb">
+            <div class="bulb-container">
+                <button class="bulb-icon" id="bulbIcon">
+                    <!-- The tooltip that appears on hover -->
+                    <div class="tooltip">Need Help?</div>
+                    <!-- Inline SVG for a simple lightbulb -->
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M9 18h6M10 22h4M12 2C8.13 2 5 5.13 5 9c0 3 2 5 2 5h10s2-2 2-5c0-3.87-3.13-7-7-7z">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Slide-Up Panel -->
+            <div class="slide-panel" id="slidePanel">
+                <div class="panel-header">
+                    <h2>Ask a Question</h2>
+                    <button id="closePanelBtn" aria-label="Close panel">&times;</button>
+                </div>
+                <div class="panel-content">
+                    <div class="chat-log" id="chatLog">
+                        <!-- Chat messages appear here -->
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <input type="text" id="userInput" placeholder="Type your question..." />
+                    <button id="submitBtn">Submit</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p>
+                University Health &amp; Counseling: CAPS Counseling and Psychological
+                Services
+            </p>
+            <p>
+                Michigan Union, Suite 4079, 530 South State Street, Ann Arbor, MI
+                48109
+            </p>
+            <p><a href="#">Urgent/Crisis Support 24/7</a></p>
+            <p><a href="#">(734) 764-8312 (24hrs)</a></p>
+            <p><a href="mailto:caps-uofm@umich.edu">caps-uofm@umich.edu</a></p>
+            <p><a href="#">Feedback</a></p>
+            <p>
+                &copy; <span id="footer-year"></span> The Regents of the University of Michigan
+            </p>
+        </div>
+    </footer>
+    <script>
+        /* Inspiration from https://www.codexworld.com/how-to/get-current-year-to-display-dynamic-year-in-copyright-using-javascript/ */
+        const currentYear = new Date().getFullYear();
+        document.getElementById('footer-year').textContent = currentYear;
+        // Get references to our elements, used chatgpt to take references for the js //
+        const bulbIcon = document.getElementById('bulbIcon');
+        const slidePanel = document.getElementById('slidePanel');
+        const closePanelBtn = document.getElementById('closePanelBtn');
+        const userInput = document.getElementById('userInput');
+        const submitBtn = document.getElementById('submitBtn');
+        const chatLog = document.getElementById('chatLog');
+        // When user clicks the bulb icon -> show the panel
+        bulbIcon.addEventListener('click', () => {
+            slidePanel.classList.add('open');
+            // Optionally focus the input
+            userInput.focus();
+        });
+        // When user clicks the close (X) button -> hide the panel
+        closePanelBtn.addEventListener('click', () => {
+            slidePanel.classList.remove('open');
+            // Optionally return focus to the icon
+            bulbIcon.focus();
+        });
+        // On Submit, add a user message and a standard "connecting..." response
+        submitBtn.addEventListener('click', () => {
+            const userText = userInput.value.trim();
+            if (userText.length > 0) {
+                // Create a user message element
+                const userMessage = document.createElement('div');
+                userMessage.classList.add('chat-message');
+                userMessage.textContent = `You: ${userText}`;
+                chatLog.appendChild(userMessage);
+                // Clear the input
+                userInput.value = '';
+                // Auto-scroll the chat log to the bottom
+                chatLog.scrollTop = chatLog.scrollHeight;
+                // “AI” response: standard message
+                setTimeout(() => {
+                    const botMessage = document.createElement('div');
+                    botMessage.classList.add('chat-message');
+                    botMessage.textContent =
+                        "Support Bot: Thanks for your question! Trying to connect you to support...";
+                    chatLog.appendChild(botMessage);
+                    chatLog.scrollTop = chatLog.scrollHeight;
+                }, 500);
+            }
+        });
+        // Optionally allow pressing Enter to submit
+        userInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                submitBtn.click();
+            }
+        });
+    </script>
+</body>
+
+</html>
